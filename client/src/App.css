@@ -1,0 +1,294 @@
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    min-width: 100%;
+}
+
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: #fff;
+    border-bottom: 2px solid #146ef5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links {
+    margin-right: 30px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    /* color: black; */
+    color: black;
+}
+
+.nav-links ul li a:hover {
+    border-bottom: 2px solid #d09683;
+}
+
+
+.nav-bar .logo {
+    margin: 0 120px 0 0px;
+}
+
+
+.nav-bar .logo img {
+    margin-top: 3px;
+    height: 100%;
+    width: 125px;
+}
+
+.nav-links-2 ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+
+.nav-links-2 ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    /* color: black; */
+    color: black;
+}
+
+.nav-links-2 ul li a:hover {
+    border-bottom: 2px solid #d09683;
+}
+
+
+.cart-btn {
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 9px;
+    background: #146ef5;
+    cursor: pointer;
+    color: black;
+}
+
+
+.cart-btn:hover {
+    background: #d09683;
+}
+
+.cart-logo {
+    padding-top: 4px;
+    height: 20px;
+    width: 20px;
+    /* filter: invert(1); */
+}
+
+
+.login-btn {
+    margin-left: 10px;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 9px;
+    background: #146ef5;
+    color: black;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #d09683;
+}
+
+/* main section */
+
+.main-content {
+    border-bottom: 2px solid #146ef5;
+    background-color: #f8f8f8;
+    flex-direction: column;
+
+}
+
+.cover-image {
+    background-color: #e3e3e3;
+    margin: 10px 0 4px 0;
+    height: 400px;
+    width: 30vw;
+    border-radius: 50px;
+    border-bottom: 2px solid #ccc;
+
+}
+
+.cover-image img {
+    height: 98%;
+    width: 100%;
+    border-radius: 40px;
+    /* object-fit: contain; */
+    object-fit: cover;
+}
+
+.offer {
+    margin: 10px 0 4px 0;
+    height: 30px;
+    width: 100vw;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+
+.search-bar {
+    margin-top: 5px;
+    width: 60vw;
+    height: 50px;
+    background-color: #04a9f9;
+    border-radius: 20px;
+    border-bottom: 2px solid #146ef5;
+}
+
+#search-items {
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border: 1px solid #7b7878;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.search-logo {
+    margin-left: 8px;
+    height: 20px;
+    width: 20px;
+    /* filter: invert(1); */
+    cursor: pointer;
+}
+
+
+.brand-catalog {
+    height: 400px;
+    width: 98vw;
+    margin-top: 15px;
+    /* background-color: #d3c5c5; */
+    /* background-color: darkgray; */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.brand-name {
+    margin-left: 22px;
+    height: 185px;
+    width: 150px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    /* border: 2px solid #ccc; */
+    border-bottom: 3px solid #ccc;
+    border-right: 2px solid #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+
+.brand-name h4 {
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+}
+
+
+
+.apple-logo{
+  height: 60px;
+  width: 60px;
+}
+
+.samsung-logo{
+width: 120px;
+height: 70px;
+}
+
+
+.vivo-logo{
+  width: 125px;
+  height: 65px;
+}
+
+
+.oneplus-logo{
+  height: 75px;
+  width: 80px;
+}
+
+
+.oppo-logo{
+  height: 80px;
+  width: 100px;
+}
+
+
+.mi-logo{
+height: 70px;
+width: 70px;
+}
+
+
+.nothing-logo{
+  height: 80px;
+  width: 110px;
+}
+
+
+.realme-logo{
+  height: 80px;
+  width: 100px;
+}
+
+
+.motorola-logo{
+  height: 53px;
+  width: 90px;
+}
+
+.iqoo-logo{
+  height: 65px;
+  width: 100px;
+}
+
+
+.infinix-logo{
+  height: 70px;
+  width: 95px;
+}
+
+.techno-logo{
+  height: 75px;
+  width: 100px;
+}
+
+
+.poco-logo{
+  height: 65px;
+  width: 100px;
+}
+
+.blend{
+  mix-blend-mode: multiply;
+}
