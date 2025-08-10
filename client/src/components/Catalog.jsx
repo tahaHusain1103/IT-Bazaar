@@ -1,5 +1,4 @@
 import React from 'react'
-import './catalog.css'
 import apple from '../assets/apple-brands.svg'
 import samsung from '../assets/samsung.png'
 import vivo from '../assets/vivo.png'
@@ -18,89 +17,103 @@ import { Link } from 'react-router-dom'
 function Catalog() {
     return (
         <>
-            <div className="brand-catalog h-[400px] w-[98vw] mt-[15px] grid grid-cols-7">
-                <Link to='/iphone-models'>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[60px] w-[60px]" src={apple} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>IPhone</h4>
-                    </div>
-                </Link>
-                <Link to={'/samsung-models'} >
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[70px] w-[120px] mix-blend-multiply" src={samsung} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Samsung</h4>
-                    </div>
-                </Link>
-                <Link>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="w-[125px] h-[65px] mix-blend-multiply" src={vivo} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Vivo</h4>
-                    </div>
-                </Link>
+            <div className="brand-catalog min-h-[400px] w-full mt-4 px-4 py-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4 lg:gap-6 max-w-screen-2xl mx-auto">
+        
+        <Link to='/i-phone' className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 object-contain" src={apple} alt="iPhone" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>iPhone</h4>
+            </div>
+        </Link>
 
-                <Link to={'/oneplus-models'}>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[75px] w-[80px] mix-blend-multiply" src={onePlus} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Oneplus</h4>
-                    </div>
-                </Link>
+        <Link to={'/samsung'} className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-10 w-16 sm:h-12 sm:w-20 md:h-14 md:w-24 lg:h-16 lg:w-28 xl:h-18 xl:w-32 mix-blend-multiply object-contain" src={samsung} alt="Samsung" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Samsung</h4>
+            </div>
+        </Link>
 
-                <Link>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[80px] w-[100px] mix-blend-multiply" src={oppo} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Oppo</h4>
-                    </div>
-                </Link>
-                <Link>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[70px] w-[70px] mix-blend-multiply" src={Mi} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Xiaomi</h4>
-                    </div>
-                </Link>
-                <Link to={'/nothing-models'}>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[80px] w-[110px] mix-blend-multiply" src={nothing} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Nothing</h4>
-                    </div>
+        <Link to="#" className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="w-16 h-10 sm:w-20 sm:h-12 md:w-24 md:h-14 lg:w-28 lg:h-16 xl:w-32 xl:h-18 mix-blend-multiply object-contain" src={vivo} alt="Vivo" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Vivo</h4>
+            </div>
+        </Link>
 
-                </Link>
-                <Link>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[80px] w-[100px] mix-blend-multiply" src={realme} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Realme</h4>
-                    </div>
-                </Link>
-                <Link>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[53px] w-[90px] mix-blend-multiply" src={motorola} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Motorola</h4>
-                    </div>
-                </Link>
-                <Link>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[65px] w-[100px] mix-blend-multiply" src={iqoo} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Iqoo</h4>
-                    </div>
-                </Link>
-                <Link>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[70px] w-[95px] mix-blend-multiply" src={infinix} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Infinix</h4>
-                    </div>
-                </Link>
-                <Link>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[65px] w-[100px] mix-blend-multiply" src={poco} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Poco</h4>
-                    </div>
-                </Link>
-                <Link>
-                    <div className="brand-name ml-[22px] h-[185px] w-[150px] bg-white flex items-center justify-center flex-col relative border-solid border-b-[3px] border-b-[#ccc] border-r-[2px] border-r-[#ccc] rounded-[50px] cursor-pointer">
-                        <img className="h-[75px] w-[100px] mix-blend-multiply" src={techno} alt="" />
-                        <h4 className='uppercase absolute bottom-5'>Techno</h4>
-                    </div>
-                </Link>
-            </div >
+        <Link to={'/oneplus'} className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-12 w-10 sm:h-14 sm:w-12 md:h-16 md:w-14 lg:h-18 lg:w-16 xl:h-20 xl:w-18 mix-blend-multiply object-contain" src={onePlus} alt="OnePlus" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>OnePlus</h4>
+            </div>
+        </Link>
+
+        <Link to="#" className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-12 w-14 sm:h-14 sm:w-16 md:h-16 md:w-18 lg:h-18 lg:w-20 xl:h-20 xl:w-22 mix-blend-multiply object-contain" src={oppo} alt="Oppo" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Oppo</h4>
+            </div>
+        </Link>
+
+        <Link to="#" className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 xl:h-18 xl:w-18 mix-blend-multiply object-contain" src={Mi} alt="Xiaomi" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Xiaomi</h4>
+            </div>
+        </Link>
+
+        <Link to={'/nothing'} className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-12 w-16 sm:h-14 sm:w-18 md:h-16 md:w-20 lg:h-18 lg:w-22 xl:h-20 xl:w-24 mix-blend-multiply object-contain" src={nothing} alt="Nothing" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Nothing</h4>
+            </div>
+        </Link>
+
+        <Link to="#" className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-12 w-14 sm:h-14 sm:w-16 md:h-16 md:w-18 lg:h-18 lg:w-20 xl:h-20 xl:w-22 mix-blend-multiply object-contain" src={realme} alt="Realme" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Realme</h4>
+            </div>
+        </Link>
+
+        <Link to="#" className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-8 w-12 sm:h-10 sm:w-14 md:h-12 md:w-16 lg:h-14 lg:w-18 xl:h-16 xl:w-20 mix-blend-multiply object-contain" src={motorola} alt="Motorola" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Motorola</h4>
+            </div>
+        </Link>
+
+        <Link to="#" className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-10 w-14 sm:h-12 sm:w-16 md:h-14 md:w-18 lg:h-16 lg:w-20 xl:h-18 xl:w-22 mix-blend-multiply object-contain" src={iqoo} alt="iQOO" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>iQOO</h4>
+            </div>
+        </Link>
+
+        <Link to="#" className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-10 w-12 sm:h-12 sm:w-14 md:h-14 md:w-16 lg:h-16 lg:w-18 xl:h-18 xl:w-20 mix-blend-multiply object-contain" src={infinix} alt="Infinix" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Infinix</h4>
+            </div>
+        </Link>
+
+        <Link to="#" className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-10 w-14 sm:h-12 sm:w-16 md:h-14 md:w-18 lg:h-16 lg:w-20 xl:h-18 xl:w-22 mix-blend-multiply object-contain" src={poco} alt="Poco" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Poco</h4>
+            </div>
+        </Link>
+
+        <Link to="#" className="group">
+            <div className="brand-card h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 w-full bg-white flex items-center justify-center flex-col relative border-b-3 border-b-gray-300 border-r-2 border-r-gray-300 rounded-3xl lg:rounded-[50px] cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <img className="h-12 w-14 sm:h-14 sm:w-16 md:h-16 md:w-18 lg:h-18 lg:w-20 xl:h-20 xl:w-22 mix-blend-multiply object-contain" src={techno} alt="Tecno" />
+                <h4 className='uppercase absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-5 text-xs sm:text-sm md:text-base font-medium text-gray-800'>Tecno</h4>
+            </div>
+        </Link>
+
+    </div>
+</div>
+
         </>
     )
 }
